@@ -1,25 +1,25 @@
 class BugseeCli < Formula
   desc "Bugsee CLI — cross-platform symbol collection, conversion, and upload."
   homepage "https://github.com/bugsee/bugsee-cli"
-  version "0.7.3"
+  version "0.7.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.3/bugsee-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "5b28b7b606c2c9a3d0f8dd025b1b7d04ef1b4dc95b3c215f3362bbd4624734de"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.4/bugsee-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "8e1730be66eee4c11b119da58503d811eac76ae5efcadc1232b5411487b0f00d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.3/bugsee-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "10790e896c8b7257364f3b8f73b18bc5490fc4364ce5766a6fa716672b746a83"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.4/bugsee-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "c320a03a7d62917f87eab3c6fb281a6f53661b6758dfb8b09bc6ef2e407242f5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.3/bugsee-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "af9bc3bf52b223bbeb0a4b2fbcb905a73c4d6c5715e3ed1966f27b32e5240a9d"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.4/bugsee-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "40e7151c6d35b45121a4f4b44ceb0b74583ed7635ae3f81aa8428d3041e0a689"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.3/bugsee-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6b721a0257493c8f6ac1960f7ba6bacbd5eb80d7412978f02430a37db7a17943"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.4/bugsee-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "40fe2e8fc2e58291ef785335ca40888cb4c131753b89be8ecec46bd1deafdb62"
     end
   end
 
@@ -47,10 +47,18 @@ class BugseeCli < Formula
   end
 
   def install
-    bin.install "bugsee-cli" if OS.mac? && Hardware::CPU.arm?
-    bin.install "bugsee-cli" if OS.mac? && Hardware::CPU.intel?
-    bin.install "bugsee-cli" if OS.linux? && Hardware::CPU.arm?
-    bin.install "bugsee-cli" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "bugsee-cli"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "bugsee-cli"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "bugsee-cli"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "bugsee-cli"
+    end
 
     install_binary_aliases!
 
