@@ -1,30 +1,31 @@
 class BugseeCli < Formula
   desc "Bugsee CLI — cross-platform symbol collection, conversion, and upload."
   homepage "https://github.com/bugsee/bugsee-cli"
-  version "0.7.6"
+  version "0.7.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.6/bugsee-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "de334cc116941e9894a2b1465b66aaedcca6ce35f44e9d0b183882e88fa73a7d"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.7/bugsee-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "d82c3a024968e2ed543684ceeb543912a6aaee675d405249efc6c6b02109f19b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.6/bugsee-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "2630d9314134f85206ed76509f202abea657660ea851a379bfc8c37a7fd9e592"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.7/bugsee-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "10b4b0318253e1cbe92742d7e4e7099dc221104bcf6ece4ed972bf6c9ba7eba4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.6/bugsee-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f9e7460314a9d96ea0b82b2bd4e7c18442f0c8aef6be250f036d3a8a08610544"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.7/bugsee-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1ecac6142afcc128c1aa7b9b62da0ae4eddbb4b9cb2d137c3fcec27d1c4b2bcf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.6/bugsee-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ebc1a6ce0f5a4917e0c9c59b20d641ab405892af17e7d4bde8db9e0e6c7dccc5"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.7/bugsee-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f61c112e5c9bb03fa3f2c659d1e1cf4a08303bfa1835cb850c5a068a5e1fe346"
     end
   end
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
+    "aarch64-pc-windows-gnu":    {},
     "aarch64-unknown-linux-gnu": {},
     "x86_64-apple-darwin":       {},
     "x86_64-pc-windows-gnu":     {},
