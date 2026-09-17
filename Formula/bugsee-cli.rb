@@ -1,25 +1,25 @@
 class BugseeCli < Formula
   desc "Bugsee CLI — cross-platform symbol collection, conversion, and upload."
   homepage "https://github.com/bugsee/bugsee-cli"
-  version "0.7.8"
+  version "0.7.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.8/bugsee-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "27a8ebaf2dbdc0789aced58ace377135d05a71fdf59a62475656f284f0d90132"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.9/bugsee-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "6ab532a724248b48b6c13f22ae5654ca4c8100152d7a8922724ecdec572773f8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.8/bugsee-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "1017892f353e57caf766160ba23254e4e97be184c519bac924c7d1e402d199de"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.9/bugsee-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "4c648632063b5ba114470c1585abf466fc9942033e930637d582709871d60c13"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.8/bugsee-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4df8aeff99ffdc1aa1d642bd009fca651ec78c6f9da06826a8892a0b1e9f152b"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.9/bugsee-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a2c4ea3667ffc39fc29804b1b2fbd68d51a75da1771e747aac02e5a96f4630c3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.8/bugsee-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a66f232df493244460133ee196f964509e11c1ad13986470e2b68c230c1af748"
+      url "https://github.com/bugsee/bugsee-cli/releases/download/v0.7.9/bugsee-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ec9bfb721ee4f72a90a8207a1bd7c0e7bffa3633bc6d4846ff14927129bfbd14"
     end
   end
 
